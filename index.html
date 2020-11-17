@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QED42 Chat App</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script> -->
+
+</head>
+
+<body>
+<div class="login container mx-auto w-full max-w-xs items-center pt-12">
+    <form action="chat.html" method="GET" class="bg-white shadow-md rounded px-8 pt-8 pb-8 m-4">
+        <label class="block text-lg font-bold mb-4 py-2 text-center bg-blue-500 rounded text-white">QED42 Chat
+            Login</label>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                Username
+            </label>
+            <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="username" type="text" placeholder="Enter Username here...">
+        </div>
+        <button id="login"
+                class="btn-primary rounded-full text-white font-bold py-2 px-4 mx-16 rounded focus:outline-none focus:shadow-outline place-self-center"
+                type="button">
+            Sign In
+        </button>
+    </form>
+    <p class="text-center text-gray-500 text-xs">
+        &copy;2020 QED42. All rights reserved.
+    </p>
+</div>
+
+<div hidden class="chat-window container mx-auto px-8 items-center py-2">
+    <label class="block text-lg font-bold mb-4 py-2 text-center bg-blue-800 rounded text-white">QED42 Chat
+        Window (Logged in as: <span id="current-user">Unknown</span>)</label>
+    <select class="text-xl font-bold mb-2 p-2 w-full text-center bg-blue-500 rounded focus:outline-none focus:shadow-outline text-white"
+            id="receiver">
+    </select>
+
+    <div class="conversation-list">
+        <ul class="conversation-list-items">
+            No conversations
+        </ul>
+    </div>
+
+    <div class="conversation">
+        <div class="message-area clearfix h-64 overflow-y-auto"></div>
+
+        <div class="input-area flex mt-2">
+            <input name="message" id="inputTextMessage"
+                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   type="text" placeholder="Enter message here...">
+            <button id="send"
+                    class="btn-primary rounded-full text-white font-bold py-2 px-4 ml-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                Send
+            </button>
+        </div>
+    </div>
+</div>
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script src="app.js"></script>
+</body>
+
+</html>

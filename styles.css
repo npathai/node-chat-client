@@ -1,0 +1,50 @@
+.btn-primary {
+    background: #4299e1;
+    transition:all .3s ease-in-out
+}
+.btn-primary:hover {
+    background:#193788
+}
+
+/* Messages Styles */
+.message {
+    color: #2d3748;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    clear: both;
+}
+
+.outgoing {
+    float: right;
+    background-color: #ebf8ff;
+}
+
+.incoming {
+    float: left;
+    background-color: #bee3f8;
+}
+
+.conversation-list {
+    float: left;
+    background-color: #e5e5e5;
+    min-width: 20%;
+    min-height: 400px;
+}
+
+.conversation {
+    float:right;
+    min-width: 80%;
+    min-height: 400px;
+}
+
+.conversation-item {
+    cursor: pointer;
+}
+
+.conversation-item-active {
+    font-weight: bold;
+}
