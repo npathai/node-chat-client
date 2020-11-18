@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QED42 Chat App</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="new-styles.css" rel="stylesheet">
+    <link href="font-awesome.min.css" rel="stylesheet"/>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script> -->
+
+</head>
+
+<body>
+
+
+<div id="content-container">
+    <div id="header-strip">
+        <div id="logged-in-user-user-avatar" ><img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Sunglasses&hairColor=Auburn&facialHairType=BeardMedium&facialHairColor=Brown&clotheType=CollarSweater&clotheColor=Blue02&eyeType=Default&eyebrowType=Default&mouthType=Disbelief&skinColor=Brown' class="user-avatar"/></div>
+    </div>
+
+    <div id="main-content">
+        <div id="conversations">
+            <div class="conversation active-conversation">
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=PastelPink&facialHairType=BeardMagestic&facialHairColor=Auburn&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Happy&eyebrowType=Default&mouthType=Sad&skinColor=Pale' class="user-avatar"/>
+                <div class="conversation-content">
+                    <div class="conversation-content-sender">Harry</div>
+                    <div class="conversation-content-text">Hello NCP. There is something happening in Milton park tonight.</div>
+                </div>
+                <div class="conversation-timestamp">11:00 PM</div>
+            </div>
+            <div class="conversation">
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat2&accessoriesType=Kurt&hatColor=Black&facialHairType=Blank&clotheType=Overall&clotheColor=White&eyeType=Surprised&eyebrowType=Default&mouthType=Default&skinColor=Brown' class="user-avatar"/>
+                <div class="conversation-content">
+                    <div class="conversation-content-sender">Ron</div>
+                    <div class="conversation-content-text">Hola Narendra</div>
+                </div>
+                <div class="conversation-timestamp">01:00 PM</div>
+            </div>
+            <div class="conversation">
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Prescription01&hatColor=Red&hairColor=PastelPink&facialHairType=Blank&facialHairColor=BrownDark&clotheType=ShirtScoopNeck&clotheColor=Gray02&eyeType=Close&eyebrowType=RaisedExcitedNatural&mouthType=ScreamOpen&skinColor=Yellow' class="user-avatar"/>
+                <div class="conversation-content">
+                    <div class="conversation-content-sender">Hermione</div>
+                    <div class="conversation-content-text">Hey dude!</div>
+                </div>
+                <div class="conversation-timestamp">06:00 PM</div>
+            </div>
+        </div>
+
+        <div id="current-conversation-container">
+            <div id="conversation-header">
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=PastelPink&facialHairType=BeardMagestic&facialHairColor=Auburn&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Happy&eyebrowType=Default&mouthType=Sad&skinColor=Pale' class="user-avatar"/>
+                <span id="current-conversation-title">Harry</span>
+            </div>
+            <div id="conversation-messages">
+                <div class="conversation-message incoming-message">
+                    Hello NCP
+                </div>
+                <div class="conversation-message incoming-message">
+                    How are you doing?
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="chat-window container mx-auto px-8 items-center py-2">-->
+<!--    <label class="block text-lg font-bold mb-4 py-2 text-center bg-blue-800 rounded text-white">QED42 Chat-->
+<!--        Window (Logged in as: <span id="current-user">Unknown</span>)</label>-->
+<!--    <select class="text-xl font-bold mb-2 p-2 w-full text-center bg-blue-500 rounded focus:outline-none focus:shadow-outline text-white"-->
+<!--            id="receiver">-->
+<!--    </select>-->
+
+<!--    <div class="conversation-list">-->
+<!--        <ul class="conversation-list-items">-->
+<!--            No conversations-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <div class="conversation">-->
+<!--        <div class="message-area clearfix h-64 overflow-y-auto"></div>-->
+
+<!--        <div class="input-area flex mt-2">-->
+<!--            <input name="message" id="inputTextMessage"-->
+<!--                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"-->
+<!--                   type="text" placeholder="Enter message here...">-->
+<!--            <button id="send"-->
+<!--                    class="btn-primary rounded-full text-white font-bold py-2 px-4 ml-4 rounded focus:outline-none focus:shadow-outline"-->
+<!--                    type="submit">-->
+<!--                Send-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+</body>
+
+</html>

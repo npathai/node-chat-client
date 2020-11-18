@@ -258,6 +258,7 @@ addConversation = (conversationId, messageData, typeOfMsg) => {
 }
 
 appendMessage = (messageData, typeOfMsg) => {
+    let newMessage = document.createElement("div")
     let newText = document.createElement("div")
     let className = typeOfMsg
     newText.classList.add(className, "message")
@@ -314,7 +315,6 @@ reloadConversationsUI = () => {
         element.id = conversation._id
         element.className = "conversation-item"
         element.innerText = conversation.members.join(",")
-        // FIXME add blur event and add bold if conversation is selected
         element.addEventListener("click", function(event) {
             let targetConversation = conversationsById[event.target.id]
             showConversation(targetConversation)
