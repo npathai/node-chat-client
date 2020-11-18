@@ -131,7 +131,6 @@ postMessage = (messageData) => {
         if (xmlhttp.readyState === XMLHttpRequest.DONE) {
             let response = JSON.parse(xmlhttp.response)
             if (xmlhttp.status === 200) {
-                // Append message in chat box
                 addConversation(conversation._id, messageData, "outgoing")
                 scrollToBottom()
             }
@@ -147,23 +146,23 @@ postMessage = (messageData) => {
 }
 
 getExistingConversationOrCreate = (receiverName) => {
-    let existingCoversation
+    let existingConversation
     for (let conversationId of Object.keys(conversationsById)) {
         let conversation = conversationsById[conversationId]
         if (conversation.members[0] === receiverName) {
-            existingCoversation = conversation
+            existingConversation = conversation
             break
         }
     }
 
-    if (existingCoversation === undefined) {
+    if (existingConversation === undefined) {
         let xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState === XMLHttpRequest.DONE) {
                 let response = JSON.parse(xmlhttp.response)
                 if (xmlhttp.status === 200) {
                     saveConversation(response)
-                    existingCoversation = response
+                    existingConversation = response
                     reloadConversationsUI()
                 }
                 else if (xmlhttp.status >= 400) {
@@ -177,7 +176,7 @@ getExistingConversationOrCreate = (receiverName) => {
         xmlhttp.send(JSON.stringify({members: [receiverName, loggedInUsername]}));
     }
 
-    return existingCoversation
+    return existingConversation
 }
 
 getExistingConversation = (conversationId) => {
@@ -239,7 +238,6 @@ loadConversations = () => {
     xmlhttp.send({});
 }
 
-// Method to add new message to the chat box
 addConversation = (conversationId, messageData, typeOfMsg) => {
     let conversation = conversationsById[conversationId]
     if (conversation === undefined) {
@@ -254,6 +252,8 @@ addConversation = (conversationId, messageData, typeOfMsg) => {
         // FIXME check if we need below if now?
     } else if (messageData.senderName === loggedInUsername) {
         appendMessage(messageData, typeOfMsg)
+    } else {
+        highlightUnreadConversation(conversationId)
     }
 }
 
@@ -279,17 +279,23 @@ showConversation = (conversation) => {
     }
 }
 
-inactive = (converstionId) => {
-    if (converstionId === undefined) {
+highlightUnreadConversation = (conversationId) => {
+    let conversationSelector = document.getElementById(conversationId)
+    conversationSelector.classList.add('conversation-item-unread')
+}
+
+inactive = (conversationId) => {
+    if (conversationId === undefined) {
         return
     }
-    let conversationSelector = document.getElementById(converstionId)
+    let conversationSelector = document.getElementById(conversationId)
     conversationSelector.classList.remove('conversation-item-active')
 }
 
 active = (conversationId) => {
     let conversationSelector = document.getElementById(conversationId)
     conversationSelector.classList.add('conversation-item-active')
+    conversationSelector.classList.remove('conversation-item-unread')
 }
 
 scrollToBottom = () => {

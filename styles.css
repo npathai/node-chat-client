@@ -45,6 +45,10 @@
     cursor: pointer;
 }
 
-.conversation-item-active {
+.conversation-item-unread {
     font-weight: bold;
+}
+
+.conversation-item-active {
+    background-color: white;
 }
