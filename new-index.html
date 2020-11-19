@@ -17,21 +17,33 @@
 
 <div id="content-container">
     <div id="header-strip">
-        <div id="logged-in-user-user-avatar" ><img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Sunglasses&hairColor=Auburn&facialHairType=BeardMedium&facialHairColor=Brown&clotheType=CollarSweater&clotheColor=Blue02&eyeType=Default&eyebrowType=Default&mouthType=Disbelief&skinColor=Brown' class="user-avatar"/></div>
-    </div>
+        <div id="left-empty"></div>
+        <div id="search-box">
+            <input id="search-input" placeholder="Search" type="text"/>
+        </div>
 
+        <div id="logged-in-user-user-avatar-container">
+            <img
+                    src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Sunglasses&hairColor=Auburn&facialHairType=BeardMedium&facialHairColor=Brown&clotheType=CollarSweater&clotheColor=Blue02&eyeType=Default&eyebrowType=Default&mouthType=Disbelief&skinColor=Brown'
+                    class="user-avatar"/>
+        </div>
+    </div>
     <div id="main-content">
         <div id="conversations">
             <div class="conversation active-conversation">
-                <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=PastelPink&facialHairType=BeardMagestic&facialHairColor=Auburn&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Happy&eyebrowType=Default&mouthType=Sad&skinColor=Pale' class="user-avatar"/>
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=PastelPink&facialHairType=BeardMagestic&facialHairColor=Auburn&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Happy&eyebrowType=Default&mouthType=Sad&skinColor=Pale'
+                     class="user-avatar"/>
                 <div class="conversation-content">
                     <div class="conversation-content-sender">Harry</div>
-                    <div class="conversation-content-text">Hello NCP. There is something happening in Milton park tonight.</div>
+                    <div class="conversation-content-text">Hello NCP. There is something happening in Milton park
+                        tonight.
+                    </div>
                 </div>
                 <div class="conversation-timestamp">11:00 PM</div>
             </div>
             <div class="conversation">
-                <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat2&accessoriesType=Kurt&hatColor=Black&facialHairType=Blank&clotheType=Overall&clotheColor=White&eyeType=Surprised&eyebrowType=Default&mouthType=Default&skinColor=Brown' class="user-avatar"/>
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat2&accessoriesType=Kurt&hatColor=Black&facialHairType=Blank&clotheType=Overall&clotheColor=White&eyeType=Surprised&eyebrowType=Default&mouthType=Default&skinColor=Brown'
+                     class="user-avatar"/>
                 <div class="conversation-content">
                     <div class="conversation-content-sender">Ron</div>
                     <div class="conversation-content-text">Hola Narendra</div>
@@ -39,7 +51,8 @@
                 <div class="conversation-timestamp">01:00 PM</div>
             </div>
             <div class="conversation">
-                <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Prescription01&hatColor=Red&hairColor=PastelPink&facialHairType=Blank&facialHairColor=BrownDark&clotheType=ShirtScoopNeck&clotheColor=Gray02&eyeType=Close&eyebrowType=RaisedExcitedNatural&mouthType=ScreamOpen&skinColor=Yellow' class="user-avatar"/>
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Prescription01&hatColor=Red&hairColor=PastelPink&facialHairType=Blank&facialHairColor=BrownDark&clotheType=ShirtScoopNeck&clotheColor=Gray02&eyeType=Close&eyebrowType=RaisedExcitedNatural&mouthType=ScreamOpen&skinColor=Yellow'
+                     class="user-avatar"/>
                 <div class="conversation-content">
                     <div class="conversation-content-sender">Hermione</div>
                     <div class="conversation-content-text">Hey dude!</div>
@@ -50,7 +63,8 @@
 
         <div id="current-conversation-container">
             <div id="conversation-header">
-                <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=PastelPink&facialHairType=BeardMagestic&facialHairColor=Auburn&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Happy&eyebrowType=Default&mouthType=Sad&skinColor=Pale' class="user-avatar"/>
+                <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=PastelPink&facialHairType=BeardMagestic&facialHairColor=Auburn&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Happy&eyebrowType=Default&mouthType=Sad&skinColor=Pale'
+                     class="user-avatar"/>
                 <span id="current-conversation-title">Harry</span>
             </div>
             <div id="conversation-messages">
@@ -59,6 +73,9 @@
                 </div>
                 <div class="conversation-message incoming-message">
                     How are you doing?
+                </div>
+                <div class="conversation-message outgoing-message">
+                    I'm good thanks!
                 </div>
             </div>
         </div>

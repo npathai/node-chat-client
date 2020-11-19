@@ -11,7 +11,7 @@ html {
 
 body {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "Segoe UI",system-ui,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -26,18 +26,19 @@ body {
 
 #header-strip {
     background-color: #464775;
-    height: 7vh;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
 }
 
-#logged-in-user-user-avatar {
-    display: flex;
-    position: absolute;
-    right: 0;
-    margin-top: 0.5vh;
-    margin-right: 1.5vh;
-}
+/*#logged-in-user-user-avatar-container {*/
+/*    right: 0;*/
+/*    margin-top: 0.5vh;*/
+/*    margin-right: 1.5vh;*/
+/*}*/
 
 #conversations {
+    overflow: scroll;
 }
 
 .conversation {
@@ -62,10 +63,9 @@ body {
 
 #current-conversation-container {
     background-color: #f3f2f1;
-    height: 100vh;
 }
 #conversation-header {
-    height: 8vh;
+    height: 4rem;
     background-color: #f3f2f1;
     border-bottom: 1px solid silver;
     box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.2);
@@ -78,6 +78,12 @@ body {
 #current-conversation-title {
     font-size: 17px;
     font-weight: bold;
+}
+
+#conversation-messages {
+    display: inline-grid;
+    margin-top: 1rem;
+    /*overflow: scroll ;*/
 }
 
 .conversation-message {
@@ -93,13 +99,16 @@ body {
 }
 
 .outgoing-message {
-
+    margin-left: 80vh;
+    background-color: #e5e5f1;
+    float: right
 }
 
 /** Flex styling **/
 
 #main-content {
-    display: flex
+    display: flex;
+    height: calc(100vh - 3.5rem);
 }
 
 #conversations {
@@ -121,4 +130,43 @@ body {
 #conversation-header {
     display: flex;
     align-items: center;
+}
+
+#header-strip {
+    align-items: center;
+    justify-content: space-between;
+}
+
+#left-empty {
+    flex: 1;
+}
+
+#search-box {
+    flex:1;
+    line-height: 2rem;
+}
+
+#search-input {
+    background-color: #edebe9;
+    width: 100%;
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+}
+
+#logged-in-user-user-avatar-container {
+    flex: 1;
+    display: flex;
+}
+
+#logged-in-user-user-avatar-container .user-avatar {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+#logged-in-user-avatar-left-empty {
+    flex: 3
+}
+
+#logged-in-user-avatar {
+    display: flex;
 }
